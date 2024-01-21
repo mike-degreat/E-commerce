@@ -89,4 +89,27 @@ function checkout() {
       cart = []; // Clear the cart
     }
 }
-
+// used a switch statement to handle different choices
+switch (userChoice) {
+    case "1":
+      //Add to cart:
+      const productId = prompt("Enter product ID to add:");
+      addToCart(productId);
+      break;
+    case "2":
+      // view cart:
+      viewCart();
+      break;
+    case "3":
+      // checkout:
+      checkout();
+      break;
+    case "4":
+      // exit:
+      console.log("Exiting...");
+      break;
+    default:
+      // handling invalid choices
+      console.log("Invalid choice.");
+  }
+} while (userChoice !== "3");
