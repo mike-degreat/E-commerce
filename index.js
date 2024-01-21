@@ -90,25 +90,38 @@ function checkout() {
     }
 }
 // used a switch statement to handle different choices
-switch (userChoice) {
-    case "1":
-      //Add to cart:
-      const productId = prompt("Enter product ID to add:");
-      addToCart(productId);
-      break;
-    case "2":
-      // view cart:
-      viewCart();
-      break;
-    case "3":
-      // checkout:
-      checkout();
-      break;
-    case "4":
-      // exit:
-      console.log("Exiting...");
-      break;
-    default:
-      // handling invalid choices
-      console.log("Invalid choice.");
-} while (userChoice !== "3");
+let userChoice;
+// Get user choice
+
+do {
+    displayMenu();
+    userChoice = prompt("Enter your choice (1-5):");
+    switch (userChoice) {
+        case "1":
+            // Browse Products:
+            displayProducts(shop);
+            break;
+        case "2":
+            // Add to Cart:
+            const productId = prompt("Enter product ID to add:");
+            addToCart(Number(productId)); // Convert input to a number
+            break;
+        case "3":
+            // View Cart:
+            viewCart();
+            break;
+        case "4":
+            // Checkout:
+            checkout();
+            break;
+        case "5":
+            // Exit:
+            console.log("Exiting...");
+            break;
+        default:
+            // Handling invalid choices
+            console.log("Invalid choice.");
+    }
+} while (userChoice !== "5");
+
+
