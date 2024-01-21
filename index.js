@@ -72,3 +72,21 @@ function viewCart() {
 function calculateCartTotal() {
     return cart.reduce((total, product) => total + product.price, 0);
 }
+
+//function to checkout
+function checkout() {
+    viewCart();
+    if (cart.length > 0) {
+      // Get user information (name, address, etc.)
+      const userInfo = {
+      name : prompt("Enter your name:"),
+       address : prompt('Your Location:'),
+       contact : prompt('Enter your Phone ;number:')
+      }
+  
+      // Confirm order
+      console.log(`Order confirmed! Thank you, ${userInfo.name}!`);
+      cart = []; // Clear the cart
+    }
+}
+
