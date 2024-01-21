@@ -53,3 +53,17 @@ function addToCart(productId) {
       console.log("Product not found or out of stock.");
     }
 }
+
+//function to view cart
+function viewCart() {
+    console.clear();
+    console.log("** Cart **");
+    if (cart.length === 0) {
+      console.log("Your cart is empty.");
+    } else {
+      cart.forEach(product => {
+        console.log(`${product.name} - $${product.price}`);
+      });
+      console.log(`Total: $${calculateCartTotal()}`);
+    }
+}
