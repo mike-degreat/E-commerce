@@ -67,3 +67,8 @@ function viewCart() {
       console.log(`Total: $${calculateCartTotal()}`);
     }
 }
+
+//function to calculate cart total
+function calculateCartTotal() {
+    return cart.reduce((total, product) => total + product.price, 0);
+}
