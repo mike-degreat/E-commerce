@@ -8,3 +8,25 @@ function displayMenu() {
     console.log("4. Checkout");
     console.log("5. Exit");
 }
+
+//created an array of objects of my products
+const shop = [
+    {
+        Id: 1,
+        Name: 'iphone 12 pro max',
+        price: '$1099',
+        inStock: true,
+    },
+    {
+        Id: 2,
+        Name: 'samsung galaxy s21 ultra',
+        price: '$999.99',
+        inStock: false,
+    },
+    {
+        Id: 3,
+        Name: "Apple watch series 7",
+        price: "$1499.99",
+        inStock: true,
+    },
+]
