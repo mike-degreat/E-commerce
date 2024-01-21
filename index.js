@@ -111,5 +111,4 @@ switch (userChoice) {
     default:
       // handling invalid choices
       console.log("Invalid choice.");
-  }
 } while (userChoice !== "3");
