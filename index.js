@@ -30,3 +30,12 @@ const shop = [
         inStock: true,
     },
 ]
+
+//this function displays all products
+displayProducts = (shop) => {
+    console.clear();
+  console.log("** Products **");
+  shop.forEach(product => {
+    console.log(`${product.Id}. ${product.Name} - $${product.price}`);
+  });
+}
