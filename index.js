@@ -39,3 +39,6 @@ displayProducts = (shop) => {
     console.log(`${product.Id}. ${product.Name} - $${product.price}`);
   });
 }
+
+//created an empty array to store items
+let cart = [];
