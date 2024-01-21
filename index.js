@@ -42,3 +42,14 @@ displayProducts = (shop) => {
 
 //created an empty array to store items
 let cart = [];
+
+//function to add items to
+function addToCart(productId) {
+    const product = shop.find(product => product.Id === productId);
+    if (product) {
+      cart.push(product);
+      console.log(`${product.Name} added to cart!`);
+    } else {
+      console.log("Product not found or out of stock.");
+    }
+}
